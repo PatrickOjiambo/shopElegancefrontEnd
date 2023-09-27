@@ -10,6 +10,9 @@ export default {
        
         Poppins: ['Poppins', "sans-serif"]
       },
+      colors: {
+       inputGray: "#F5F5F5"
+      },
     },
   },
   plugins: [],
