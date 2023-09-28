@@ -9,6 +9,7 @@ import Contact from "./Views/Contact/Contact";
 import Profile from "./Views/Profile/Profile";
 import Cart from "./Views/Cart/Cart";
 import Signup from "./Views/Auth/Signup";
+import Login from "./Views/Auth/Login"
 
 function App() {
   return (
@@ -23,9 +24,11 @@ function App() {
           <Route path="/signup" element={<Signup />} exact />
           <Route path="/cart" element={<Cart />} exact />
           <Route path="/profile" element={<Profile />} exact />
+          <Route path="/login" element={<Login/>} exact/>
         </Routes>
+        
       </Router>
-      <Footer/>
+      <Footer className="absolute bottom-0"/>
     </div>
   );
 }

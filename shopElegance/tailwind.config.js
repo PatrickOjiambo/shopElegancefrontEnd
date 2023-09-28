@@ -11,7 +11,8 @@ export default {
         Poppins: ['Poppins', "sans-serif"]
       },
       colors: {
-       inputGray: "#F5F5F5"
+       inputGray: "#F5F5F5",
+       buttonPink: "#DB4444"
       },
     },
   },

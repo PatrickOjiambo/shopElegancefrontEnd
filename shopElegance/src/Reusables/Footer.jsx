@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa"
 import {FiTwitter} from "react-icons/fi"
 function Footer() {
     const [email, setEmail] = useState('');
-    return (<div className="text-sm font-light h-auto pt-4 bottom-0 absolute">
+    return (<div className="text-sm font-light h-auto pt-4">
         <div className="bg-black text-white flex justify-around w-screen h-auto">
             <div>
                 <h2 className="text-sm">Elegance</h2>
@@ -55,7 +55,7 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div className="border-solid border-t-zinc-600 bg-black w-screen bottom-0 left-1 flex justify-center items-center">
+        <div className="border-solid border-t border-zinc-500 bg-black w-screen bottom-0 left-1 flex justify-center items-center">
             <AiOutlineCopyrightCircle className="text-zinc-500" />
 
             <p className="text-zinc-500 text-center py-2 pl-2">Copyright Pash 2023. All rights reserved</p>

@@ -14,26 +14,26 @@ import { FiUser } from "react-icons/fi"
 import { BiSearchAlt2 } from "react-icons/bi"
 function NavBar() {
     const [searchItem, setSearchItem] = useState('')
-    return (<div>
+    return (<div className="border-b pb-4">
         <ul className="flex justify-around pt-4 font-extralight">
             <li className="font-bold text-lg">Elegance</li>
 
             <ul className="flex text-base">
                 <Link to='/'>
 
-                    <li className="">Home</li>
+                    <li className="hover:underline">Home</li>
                 </Link>
                 <Link to='/about'>
 
-                    <li className="pl-6">About</li>
+                    <li className="pl-6 hover:underline">About</li>
                 </Link>
                 <Link to='/contact'>
 
-                    <li className="pl-6">Contact</li>
+                    <li className="pl-6 hover:underline">Contact</li>
                 </Link>
                 <Link to='/signup'>
 
-                    <li className="pl-6">Signup</li>
+                    <li className="pl-6 hover:underline">Signup</li>
                 </Link>
             </ul>
             <ul className="flex justify-around items-center">
