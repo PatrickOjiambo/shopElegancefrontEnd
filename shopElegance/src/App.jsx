@@ -15,9 +15,10 @@ function App() {
   return (
     <div className="font-Poppins">
         <Header/>
-      <Router>
+     <div className="px-5">
+     <Router>
         <NavBar />
-        <Routes>
+        <Routes >
           <Route path="/" element={<Home />} exact />
           <Route path="/contact" element={<Contact />} exact />
           <Route path="/about" element={<About />} exact />
@@ -28,6 +29,7 @@ function App() {
         </Routes>
         
       </Router>
+     </div>
       <Footer className="absolute bottom-0"/>
     </div>
   );

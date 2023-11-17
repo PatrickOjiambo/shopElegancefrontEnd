@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa"
 import {FiTwitter} from "react-icons/fi"
 function Footer() {
     const [email, setEmail] = useState('');
-    return (<div className="text-sm font-light h-auto pt-4">
+    return (<div className="text-sm font-light h-auto pt-4 bottom-0">
         <div className="bg-black text-white flex justify-around w-screen h-auto">
             <div>
                 <h2 className="text-sm">Elegance</h2>
@@ -23,7 +23,7 @@ function Footer() {
             </div>
             <div>
                 <p className="text-sm">Support</p>
-                <p>Muthithi Rd, 42 Westlands Nairobi</p>
+                <p>Muthithi Rd, 29 Westlands Nairobi</p>
                 <p>pashrick237@gmail.com</p>
                 <p>+254742220881</p>
             </div>
