@@ -1,4 +1,4 @@
-import {TbRectangleVerticalFilled} from "react-icons/tb"
+import { TbRectangleVerticalFilled } from "react-icons/tb"
 import CountDown from "./countdown";
 import Carousel from "./carousel";
 /**
@@ -8,14 +8,15 @@ import Carousel from "./carousel";
 function Flash() {
     return (<div className="font-Poppins mt-6">
         <div className="flex items-center">
-           <TbRectangleVerticalFilled className="text-buttonPink text-2xl"/>
-           <p className="text-buttonPink text-xs ml-2">Today's</p>
+            <TbRectangleVerticalFilled className="text-buttonPink text-2xl" />
+            <p className="text-buttonPink text-xs ml-2">Today's</p>
         </div>
         <div className="flex mt-4">
-        <p className="text-lg font-bold">Flash Sales</p>
-        <CountDown className="mr-12"/>
+            <p className="text-lg font-bold">Flash Sales</p>
+            <CountDown className="mr-12" />
         </div>
-        <Carousel/>
+        <div className="flex"><Carousel/>  </div>
+
     </div>);
 }
 

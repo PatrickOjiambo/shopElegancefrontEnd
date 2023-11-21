@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="font-Poppins">
         <Header/>
-     <div className="px-5">
+     <div className="px-20">
      <Router>
         <NavBar />
         <Routes >
