@@ -1,6 +1,6 @@
 import {TbRectangleVerticalFilled} from "react-icons/tb"
-import ProductCard from "./productcard";
 import CountDown from "./countdown";
+import Carousel from "./carousel";
 /**
  * 
  * @returns Flash component
@@ -15,7 +15,7 @@ function Flash() {
         <p className="text-lg font-bold">Flash Sales</p>
         <CountDown className="mr-12"/>
         </div>
-        <ProductCard/>
+        <Carousel/>
     </div>);
 }
 
