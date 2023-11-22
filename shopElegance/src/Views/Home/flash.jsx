@@ -15,7 +15,7 @@ function Flash() {
             <p className="text-lg font-bold">Flash Sales</p>
             <CountDown className="mr-12" />
         </div>
-        <div className="flex"><Carousel/>  </div>
+        <Carousel/>
 
     </div>);
 }
