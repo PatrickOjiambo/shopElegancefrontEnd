@@ -24,6 +24,7 @@ function ProductCard(props) {
         <div className="w-56 rounded-lg hover:shadow-lg relative"
         // onMouseEnter={handleMouseEnter}
         // onMouseLeave={handleMouseLeave}
+        onClick={props.onProductClick}
         >
 
             <div className="bg-inputGray p-4">

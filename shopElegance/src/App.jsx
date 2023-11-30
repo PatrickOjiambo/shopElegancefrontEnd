@@ -10,27 +10,34 @@ import Profile from "./Views/Profile/Profile";
 import Cart from "./Views/Cart/Cart";
 import Signup from "./Views/Auth/Signup";
 import Login from "./Views/Auth/Login"
+import { Item } from "./Views/Home/item";
+import {itemLoader} from "./Views/Home/item";
 
 function App() {
   return (
     <div className="font-Poppins">
-        <Header/>
-     <div className="px-20">
-     <Router>
-        <NavBar />
-        <Routes >
-          <Route path="/" element={<Home />} exact />
-          <Route path="/contact" element={<Contact />} exact />
-          <Route path="/about" element={<About />} exact />
-          <Route path="/signup" element={<Signup />} exact />
-          <Route path="/cart" element={<Cart />} exact />
-          <Route path="/profile" element={<Profile />} exact />
-          <Route path="/login" element={<Login/>} exact/>
-        </Routes>
-        
-      </Router>
-     </div>
-      <Footer className="absolute bottom-0"/>
+      <Header />
+      <div className="px-20">
+        <Router>
+          <NavBar />
+          <Routes >
+            <Route path="/" element={<Home />} exact />
+            <Route path="/:product_id"
+            loader={itemLoader}
+            element={<Item />} exact />
+            <Route />
+            <Route path="/contact" element={<Contact />} exact />
+            <Route path="/about" element={<About />} exact />
+            <Route path="/signup" element={<Signup />} exact />
+            <Route path="/cart" element={<Cart />} exact />
+            <Route path="/profile" element={<Profile />} exact />
+            <Route path="/login" element={<Login />} exact />
+
+          </Routes>
+
+        </Router>
+      </div>
+      <Footer className="absolute bottom-0" />
     </div>
   );
 }
