@@ -4,7 +4,8 @@ import axios from "axios";
      * Loader function for the items
      */
     const itemLoader = async (id) => {
-        const response = await axios.post("http://localhost:4267/register", {
+        console.log("Loader ran")
+        const response = await axios.post("http://localhost:4267/products/:id", {
             product_id: id
         });
     }
@@ -24,16 +25,16 @@ const Item = () => {
 
             <img src="../images/flash2.png" />
             <section>
-                <p>{item.name}</p>
+                <p>{data.name}</p>
                 <div className="flex">
-                    <p>${item.amount}</p>
+                    <p>${data.amount}</p>
                     <p>$1400</p>
-                    <p>{item.discount}</p>
+                    <p>520</p>
                 </div>
                 <p>In stock</p>
                 <div className="flex items-center pb-2">
                     <Rating name="read-only" value={value} size="small" readOnly />
-                    <p className=" text-zinc-300">({item.comments_count})</p>
+                    <p className=" text-zinc-300">({data.comments_count})</p>
                 </div>
             </section>
         </div>);

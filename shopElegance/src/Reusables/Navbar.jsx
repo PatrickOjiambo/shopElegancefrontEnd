@@ -1,40 +1,34 @@
 import React from "react";
 import { useState } from "react";
-import About from "../Views/About/About"
-import Home from "../Views/Home/Home"
-import Contact from "../Views/Contact/Contact"
-import Profile from "../Views/Profile/Profile"
-import Cart from "../Views/Cart/Cart"
-import Signup from "../Views/Auth/Signup"
 import {
-    Link
-} from "react-router-dom";
+    NavLink} from "react-router-dom";
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import { FiUser } from "react-icons/fi"
 import { BiSearchAlt2 } from "react-icons/bi"
 function NavBar() {
+
     const [searchItem, setSearchItem] = useState('')
     return (<div className="border-b pb-4">
         <ul className="flex justify-around pt-4 font-extralight">
             <li className="font-bold text-lg">Elegance</li>
 
             <ul className="flex text-base">
-                <Link to='/'>
-
+                <NavLink to='/'>
+                {/* style={({ isActive }) => (isActive ? activeLink : null)} */}
                     <li className="hover:underline">Home</li>
-                </Link>
-                <Link to='/about'>
+                </NavLink>
+                <NavLink to='/about'>
 
                     <li className="pl-6 hover:underline">About</li>
-                </Link>
-                <Link to='/contact'>
+                </NavLink>
+                <NavLink to='/contact'>
 
                     <li className="pl-6 hover:underline">Contact</li>
-                </Link>
-                <Link to='/signup'>
+                </NavLink>
+                <NavLink to='/signup'>
 
                     <li className="pl-6 hover:underline">Signup</li>
-                </Link>
+                </NavLink>
             </ul>
             <ul className="flex justify-around items-center">
                 <div className="relative">
@@ -45,14 +39,14 @@ function NavBar() {
                         <BiSearchAlt2 className="relative " />
                     </div>
                 </div>
-                <Link to='/cart'>
+                <NavLink to='/cart'>
 
                     <li className="pl-6"><AiOutlineShoppingCart /></li>
-                </Link>
-                <Link to='/profile'>
+                </NavLink>
+                <NavLink to='/profile'>
 
                     <li className="pl-6"><FiUser /></li>
-                </Link>
+                </NavLink>
             </ul>
 
         </ul>

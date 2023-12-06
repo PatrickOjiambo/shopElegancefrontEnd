@@ -29,7 +29,7 @@ function ProductCard(props) {
 
             <div className="bg-inputGray p-4">
                 <div className="flex justify-between  items-center">
-                    <p className="bg-buttonPink rounded-sm text-white text-xs p-1">-{props.discount}%</p>
+                    <p className="bg-buttonPink rounded-sm text-white text-xs p-1">-0%</p>
                     <AiOutlineHeart className="hover:text-buttonPink" />
                 </div>
                 <div className="flex mt-2 justify-center">
@@ -42,7 +42,7 @@ function ProductCard(props) {
                             Add to cart
                         </button>)
                     } */}
-                    <img src="../images/flash1.png" alt="Funny" className="w-20 h-auto" />
+                    <img src={props.url} alt="Funny" className="w-20 h-auto" />
 
                 </div>
             </div>
@@ -55,7 +55,7 @@ function ProductCard(props) {
                     <p className="text-zinc-500 line-through ml-3">$160</p>
                 </div>
                 <div className="flex items-center pb-2">
-                    <Rating name="read-only" value={value} size="small" readOnly />
+                    <Rating name="read-only" value={props.rating} size="small" readOnly />
                     <p className=" text-zinc-300">({props.comments_count})</p>
                 </div>
             </div>

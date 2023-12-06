@@ -6,7 +6,6 @@ import axios from "axios";
 function Products() {
     const [products, setProducts] = useState([])
     const navigate = useNavigate();
-    console.log(products)
     useEffect(() => {
         axios.get("http://localhost:4267/products")
             .then((res) => {
@@ -14,7 +13,6 @@ function Products() {
             })
 
             .catch((err) => {
-                console.log(err)
             })
     }, [])
 
@@ -30,15 +28,16 @@ function Products() {
      * @param {String} product_id 
      */
     const handleAddToWishlist = (product_id) => {
-        console.log(product_id);
     };
 
     const productItem = Array.isArray(products) ? products.map((item) => {
         return (
             <ProductCard
                 key={item.id}
+                url={item.image}
                 prodname={item.name}
-                amount={item.amount}
+                rating={item.rating}
+                amount={item.price}
                 comments_count={item.comments_count}
                 discount={item.discount}
                 onProductClick={() => handleProductClick(item)}
