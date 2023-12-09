@@ -11,20 +11,20 @@ import Cart from "./Views/Cart/Cart";
 import Signup from "./Views/Auth/Signup";
 import Login from "./Views/Auth/Login"
 import { Item } from "./Views/Home/item";
-import { itemLoader } from "./Views/Home/item";
 import NotFound from "./Reusables/notFound";
 import { ErrorBoundary } from "react-error-boundary";
 import { Outlet } from "react-router-dom";
 import Error from "./Reusables/error";
+import { itemLoader } from "./Views/Home/item";
 const router = createBrowserRouter(
   createRoutesFromElements(
 
     <Route path="/" element={<NavbarWrapper />} exact >
       <Route path="/" element={<Home />} exact />
       <Route path="/:product_id"
+        element={<Item />}
         loader={itemLoader}
-        element={<Item />} exact />
-
+         exact />
       <Route path="/contact" element={<Contact />} exact />
       <Route path="/about" element={<About />} exact />
       <Route path="/signup" element={<Signup />} exact />
@@ -39,14 +39,14 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <div className="font-Poppins">
+    <div className="font-Poppins" style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <ErrorBoundary FallbackComponent={Error}>
         <Header />
-        <div className="px-20">
+        <div className="px-20 flex-grow">
           {/* <NavbarWrapper /> */}
           <RouterProvider router={router} />
         </div>
-        <Footer className="absolute bottom-0" />
+        <Footer className="bottom-0" />
       </ErrorBoundary>
     </div>
   );
